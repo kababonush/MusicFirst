@@ -27,5 +27,16 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(this, LibraryActivity.class);
         startActivity(intent);
     }
+    public void playOrPause(View view)
+    {
+        if (mysound.isPlaying() == true)
+        {
+            mysound.pause();
+        }
+        else
+        {
+            mysound.start();
+        }
+    }
 
 }

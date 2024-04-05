@@ -21,27 +21,39 @@ public class LibraryActivity extends AppCompatActivity {
         Intent intent= new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-    public void missingSong(View v){
-        mysound = MediaPlayer.create(LibraryActivity.this,R.raw.missing);
-        mysound.start();
+
+    public void playSong(int songID) {
+        if(playing) {
+            mysound.pause();
+        }
         playing = true;
-    }
-    public void prettySong(View v){
-        mysound = MediaPlayer.create(LibraryActivity.this,R.raw.songpretty);
+        mysound = MediaPlayer.create(LibraryActivity.this, songID);
         mysound.start();
-        playing = true;
     }
-    public void tzlalimSong(View v){
-        mysound = MediaPlayer.create(LibraryActivity.this,R.raw.tzlalim);
-        mysound.start();
-        playing = true;
+
+
+    public void missingSong(View v)
+    {
+        playSong(R.raw.missing);
     }
-    public void playOrPause(View view){
-        if (playing){
+
+    public void prettySong(View v)
+    {
+        playSong(R.raw.songpretty);
+    }
+    public void tzlalimSong(View v)
+    {
+        playSong(R.raw.tzlalim);
+    }
+    public void playOrPause(View view)
+    {
+        if (playing == true)
+        {
             mysound.pause();
             playing = false;
         }
-        if(!playing){
+        else
+        {
             mysound.start();
             playing = true;
         }

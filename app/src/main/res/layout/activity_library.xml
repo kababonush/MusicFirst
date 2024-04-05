@@ -61,13 +61,15 @@
         android:id="@+id/tzlalim"
         android:layout_width="312dp"
         android:layout_height="65dp"
+        android:layout_marginTop="12dp"
         android:layout_marginBottom="368dp"
         android:onClick="tzlalimSong"
         android:text="צללים של דמותה -אייל גולן"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.525"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prettylib" />
 
     <Button
         android:id="@+id/searchbuttonlib"
@@ -110,6 +112,7 @@
         android:layout_width="141dp"
         android:layout_height="49dp"
         android:layout_marginBottom="20dp"
+        android:onClick="playOrPause"
         android:text="Play/Pause"
         app:layout_constraintBottom_toTopOf="@+id/homebuttonlib"
         app:layout_constraintEnd_toEndOf="parent"
